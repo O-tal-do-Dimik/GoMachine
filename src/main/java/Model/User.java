@@ -25,6 +25,4 @@ public class User {
     String celular;
     String cidade;
 
-    public void setImagemUri(String originalFilename) {
-    }
 }

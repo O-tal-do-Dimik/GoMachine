@@ -10,7 +10,7 @@ import java.util.List;
 public class UserService {
 
 
-    UserRepository repository;
+    private UserRepository repository;
 
     @Autowired
     public void setRepository(UserRepository repository) {
@@ -29,9 +29,9 @@ public class UserService {
         repository.deleteById(id);
     }
 
-    public List<User> listAll(){
-        return repository.findAllByDeletedIsNull();
-    }
+//    public List<User> listAll(){
+//        return repository.findAll();
+//    }
     public User findById(Long id){
         return repository.getById(id);
     }
@@ -40,6 +40,9 @@ public class UserService {
         repository.deleteById(id);
     }
 
+    public UserRepository getRepository(){
+        return repository;
+    }
 
 
 }
